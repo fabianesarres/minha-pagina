@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fabiane Sarres | Da Nutrição à Tecnologia</title>
+  <meta name="description" content="Fabiane Sarres: nutricionista em transição de carreira para a tecnologia. Desenvolvedora em formação, estudante de ADS no SENAC-DF.">
+
+  <!-- Fontes do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Meu arquivo de estilo -->
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+  <!-- ===== CABEÇALHO ===== -->
+  <header class="cabecalho">
+    <a href="#inicio" class="logo">Fabiane <strong>Sarres</strong><span class="cursor">_</span></a>
+    <nav class="menu">
+      <a href="#trajetoria">trajetória</a>
+      <a href="#projeto">projeto</a>
+      <a href="#ferramenta">calculadora</a>
+      <a href="#contato">contato</a>
+    </nav>
+    <!-- Botão que troca o tema (usa if/else no script.js) -->
+    <button id="botao-tema" class="botao-tema" type="button" aria-label="Ativar tema escuro">☾</button>
+  </header>
+
+  <main>
+
+    <!-- ===== APRESENTAÇÃO ===== -->
+    <section id="inicio" class="hero">
+      <div class="hero-texto">
+        <p class="codigo">&lt;hello world /&gt;</p>
+        <h1>Cuidar de pessoas, agora também com <em>código.</em></h1>
+        <p class="subtitulo">Desenvolvedora em formação · ADS</p>
+        <p class="hero-descricao">
+          Sou a Fabiane, nutricionista clínica em transição de carreira para a tecnologia.
+          Estudo Análise e Desenvolvimento de Sistemas no SENAC-DF e uno saúde e tecnologia
+          para criar soluções digitais mais humanas, acessíveis e funcionais.
+        </p>
+        <p class="saudacao">Olá. Que bom ter você aqui!</p>
+        <div class="hero-botoes">
+          <a href="https://www.linkedin.com/in/fabianesarres" target="_blank" rel="noopener noreferrer" class="botao botao-principal">Ver meu LinkedIn</a>
+          <a href="https://github.com/fabianesarres" target="_blank" rel="noopener noreferrer" class="botao botao-secundario">Meu GitHub</a>
+        </div>
+      </div>
+
+      <div class="hero-foto">
+        <div class="moldura">
+          <img src="foto-fabiane.jpg" alt="Foto de Fabiane Sarres sorrindo">
+        </div>
+        <p class="selo"><span class="selo-codigo">saúde</span> + tecnologia</p>
+      </div>
+    </section>
+
+    <!-- ===== TRAJETÓRIA (montada pelo JavaScript com array e laço) ===== -->
+    <section id="trajetoria" class="secao">
+      <p class="codigo">// 01 · minha transição de carreira</p>
+      <h2>Da nutrição à <em>tecnologia</em></h2>
+      <p class="secao-descricao">
+        Minha experiência na saúde me deu escuta, empatia e foco nas pessoas.
+        Hoje levo tudo isso para o desenvolvimento de software.
+      </p>
+      <ol id="linha-do-tempo" class="linha-do-tempo"></ol>
+    </section>
+
+    <!-- ===== PROJETO EM DESTAQUE ===== -->
+    <section id="projeto" class="secao">
+      <p class="codigo">// 02 · projeto em destaque</p>
+      <div class="projeto">
+        <div class="projeto-texto">
+          <p class="projeto-evento">Hackathon AWS Women in Cloud</p>
+          <h2>Mulheres no <em>Controle</em></h2>
+          <p>
+            Plataforma criada em equipe no Hackathon AWS Women in Cloud, com o Kiro.
+            Ela apoia mulheres em transição para a área de cloud com micro-aulas de 5 a 10 minutos,
+            nivelamento, trilha personalizada com IA, gamificação e preparação para entrevistas.
+          </p>
+          <a href="https://fabianesarres.github.io/mulheres-no-controle/demo/" target="_blank" rel="noopener noreferrer" class="botao botao-principal">Ver a demonstração</a>
+        </div>
+
+        <div class="papel">
+          <p class="papel-titulo">Meu papel</p>
+          <p class="papel-cargo">Análise de requisitos e gestão do projeto</p>
+          <ul class="papel-lista">
+            <li>Escuta ativa na reunião inicial com a equipe</li>
+            <li>Levantamento e análise de requisitos</li>
+            <li>Planejamento e desenho do projeto</li>
+            <li>Engenharia de prompts no Kiro</li>
+            <li>Gestão do tempo da equipe</li>
+            <li>Slides e roteiro do pitch</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CAIXA DE FERRAMENTAS: CALCULADORA DE IMC ===== -->
+    <section id="ferramenta" class="secao">
+      <p class="codigo">// 03 · caixa de ferramentas</p>
+      <h2>Onde a nutrição encontra o <em>código</em></h2>
+      <p class="secao-descricao">
+        Uma calculadora de IMC feita com JavaScript, unindo as minhas duas áreas.
+      </p>
+
+      <div class="janela">
+        <div class="janela-topo">
+          <span class="bolinha"></span><span class="bolinha"></span><span class="bolinha"></span>
+          <span class="janela-nome">calculadora-imc.js</span>
+        </div>
+
+        <div class="janela-corpo">
+          <form id="form-imc" class="form-imc" novalidate>
+            <div class="campo">
+              <label for="peso">Peso (kg)</label>
+              <input type="text" id="peso" inputmode="decimal" placeholder="Ex: 62,5">
+            </div>
+            <div class="campo">
+              <label for="altura">Altura (m)</label>
+              <input type="text" id="altura" inputmode="decimal" placeholder="Ex: 1,65">
+            </div>
+            <button type="submit" class="botao botao-principal">Calcular IMC</button>
+          </form>
+
+          <div id="resultado" class="resultado" aria-live="polite">
+            <p class="resultado-vazio">&gt; Preencha seu peso e sua altura para ver o resultado.</p>
+          </div>
+
+          <div class="historico">
+            <div class="historico-topo">
+              <h3>Últimos cálculos</h3>
+              <button id="limpar-historico" type="button" class="botao-texto">limpar</button>
+            </div>
+            <ul id="lista-historico" class="lista-historico"></ul>
+          </div>
+
+          <p class="aviso">Ferramenta educativa: o IMC não substitui uma avaliação com nutricionista.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HABILIDADES (montadas pelo JavaScript) ===== -->
+    <section class="secao secao-habilidades">
+      <p class="codigo">// 04 · o que estou estudando</p>
+      <ul id="lista-habilidades" class="habilidades"></ul>
+    </section>
+
+    <!-- ===== FRASE ===== -->
+    <section class="frase">
+      <p class="codigo">&lt;propósito /&gt;</p>
+      <p class="frase-texto">da nutrição à tecnologia, <em>cuidando de pessoas</em></p>
+    </section>
+
+  </main>
+
+  <!-- ===== CONTATO ===== -->
+  <footer id="contato" class="rodape">
+    <p class="codigo">// contato</p>
+    <h2>Vamos <em>conversar?</em></h2>
+    <p>Estou aberta a oportunidades e conexões na área de tecnologia.</p>
+    <div class="rodape-links">
+      <a href="mailto:fabianesarres.dev@gmail.com">fabianesarres.dev@gmail.com</a>
+      <a href="https://www.linkedin.com/in/fabianesarres" target="_blank" rel="noopener noreferrer">linkedin.com/in/fabianesarres</a>
+      <a href="https://github.com/fabianesarres" target="_blank" rel="noopener noreferrer">github.com/fabianesarres</a>
+    </div>
+    <p class="creditos">Feito com HTML, CSS e JavaScript por Fabiane Sarres · Programação Web com JS · SENAC-DF · Brasília, 2026</p>
+  </footer>
+
+  <!-- Meu arquivo JavaScript fica no fim do body -->
+  <script src="script.js"></script>
+</body>
+</html>
